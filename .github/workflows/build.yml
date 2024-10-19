@@ -17,12 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK
-        uses: actions/setup-java@3
+        uses: actions/setup-java@v2 # Usar la versión 2
         with:
           java-version: '21'
           distribution: 'adopt' # Especifica la distribución de Java aquí
       - name: Cache Maven packages
-        uses: actions/cache@3
+        uses: actions/cache@v3 # Usar la versión 3
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -38,18 +38,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK
-        uses: actions/setup-java@3
+        uses: actions/setup-java@v2 # Usar la versión 2
         with:
           java-version: '21'
           distribution: 'adopt' # Especifica la distribución de Java aquí
       - name: Cache SonarCloud packages
-        uses: actions/cache@3
+        uses: actions/cache@v3 # Usar la versión 3
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache Maven packages
-        uses: actions/cache@3
+        uses: actions/cache@v3 # Usar la versión 3
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -68,12 +68,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK
-        uses: actions/setup-java@3
+        uses: actions/setup-java@v2 # Usar la versión 2
         with:
           java-version: '21'
           distribution: 'adopt' # Especifica la distribución de Java aquí
       - name: Cache Maven packages
-        uses: actions/cache@3
+        uses: actions/cache@v3 # Usar la versión 3
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
