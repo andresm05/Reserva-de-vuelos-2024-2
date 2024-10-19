@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ReservaVuelosApplication<reservaVuelos>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.udea.reservaVuelos.ReservaVuelosApplication",
+            "projectName": "reservaVuelos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
