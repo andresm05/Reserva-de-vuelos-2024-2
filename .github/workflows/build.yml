@@ -10,8 +10,29 @@ on:
       - main
 
 jobs:
+  # Test's job
+  tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2 # Usar la versión 2
+        with:
+          java-version: '21'
+          distribution: 'adopt' # Especifica la distribución de Java aquí
+      - name: Cache Maven packages
+        uses: actions/cache@v3 # Usar la versión 3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+      - name: Run Tests
+        run: mvn -B clean test
+
   # Sonar's Job
   sonar:
+    needs: tests
     name: SonarCloud analysis
     runs-on: ubuntu-latest
     steps:

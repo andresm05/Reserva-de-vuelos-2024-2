@@ -19,6 +19,7 @@ import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.udea.reservaVuelos.model.DTOs.PasajeroDTO;
 import com.udea.reservaVuelos.model.DTOs.ReservaDTO;
@@ -30,6 +31,7 @@ import com.udea.reservaVuelos.repository.ReservaRepository;
 import com.udea.reservaVuelos.services.pasajero.CrearPasajeroService;
 import com.udea.reservaVuelos.services.reserva.ImpCrearReservaService;
 
+@ActiveProfiles("test")
 class ImpCrearReservaServiceTest {
 
     @Mock

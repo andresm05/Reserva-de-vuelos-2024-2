@@ -17,12 +17,14 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.udea.reservaVuelos.model.DTOs.PasajeroDTO;
 import com.udea.reservaVuelos.model.entities.Pasajero;
 import com.udea.reservaVuelos.repository.PasajeroRepository;
 import com.udea.reservaVuelos.services.pasajero.ImpCrearPasajeroService;
 
+@ActiveProfiles("test")
 class ImpCrearPasajeroServiceTest {
 
     @InjectMocks

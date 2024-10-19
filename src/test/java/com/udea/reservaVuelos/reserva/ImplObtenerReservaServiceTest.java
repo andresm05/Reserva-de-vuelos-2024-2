@@ -21,6 +21,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.udea.reservaVuelos.model.entities.Pasajero;
 import com.udea.reservaVuelos.model.entities.Reserva;
@@ -30,6 +31,7 @@ import com.udea.reservaVuelos.repository.ReservaPasajeroRepository;
 import com.udea.reservaVuelos.repository.ReservaRepository;
 import com.udea.reservaVuelos.services.reserva.ImplObtenerReservaService;
 
+@ActiveProfiles("test")
 class ImplObtenerReservaServiceTest {
 
     @Mock
