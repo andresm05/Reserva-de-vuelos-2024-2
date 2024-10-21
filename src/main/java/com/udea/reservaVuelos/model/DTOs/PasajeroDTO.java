@@ -1,8 +1,10 @@
 package com.udea.reservaVuelos.model.DTOs;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class PasajeroDTO {
     private String nombre;
     private String apellido;
