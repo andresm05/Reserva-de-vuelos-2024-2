@@ -113,6 +113,7 @@
                                 </rules>
                                 <includes>
                                     <include>com/udea/reservaVuelos/services/**</include>
+                                    <include>com/udea/reservaVuelos/controllers/**</include>
                                 </includes>
                             </configuration>
                         </execution>
