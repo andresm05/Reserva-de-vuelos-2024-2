@@ -1,21 +1,22 @@
 package com.udea.reservaVuelos.model.DTOs;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.experimental.FieldDefaults;
 
-@Getter
-@Setter
+import static lombok.AccessLevel.PRIVATE;
+
+@Data
+@FieldDefaults(level = PRIVATE)
 public class PasajeroDTO {
-    private String nombre;
-    private String apellido;
-    private String tipoDocumento;
-    private String numeroDocumento;
-    private String correo;
-    private String telefono;
+    String nombre;
+    String apellido;
+    String tipoDocumento;
+    String numeroDocumento;
+    String correo;
+    String telefono;
 
-    // Atributos adicionales para ReservaPasajero
-    private Boolean accesibilidad;
-    private Boolean equipajeAdicional;
-    private Boolean adiciones;
-    private Boolean asientoElegido;
+    Boolean accesibilidad;
+    Boolean equipajeAdicional;
+    Boolean adiciones;
+    Boolean asientoElegido;
 }
